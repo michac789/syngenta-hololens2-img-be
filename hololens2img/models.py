@@ -3,11 +3,11 @@ from django.db import models
 
 
 class AbstractImageModel(models.Model):
-    label = models.CharField(max_length=50)
+    label = models.CharField(max_length=50, blank=True)
     order = models.IntegerField(unique=True, validators=[
         MinValueValidator(1), MaxValueValidator(100)
     ])
-    image_data_base64 = models.TextField()
+    image = models.ImageField(upload_to='images/', null=True)
     
     class Meta:
         abstract = True

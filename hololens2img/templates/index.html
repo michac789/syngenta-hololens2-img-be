@@ -45,14 +45,12 @@
     </a>
     <div class="small-text">
         This backend server host the PDF images required for Syngenta Hololens2 application.
-        
-        Images for each station are stored in a different model.
-        Refer to the instruction below on how to modify existing image.
+        Refer to the instruction below on how to use.
     </div>
     <ul class="steps">
-        <li class="step">Log in to Admin Page (link above) with your credentials, or create a new super user by executing `python manage.py createsuperuser`. Make sure that you are in the correct directory where `manage.py` is located.</li>
-        <li class="step">There are 7 stations as follows: MS1, MS2, MS3, MS4, MS5, MS6, WH, each has a different model. In admin page under 'HOLOLENS2IMG', click on a station to access it.</li>
-        <li class="step">TODO</li>
+        <li class="step">Log in to Admin Page (link above) with the credentials (username: superuser, password: syngenta_ar_2024).</li>
+        <li class="step">Click on any of the 7 stations name to access it (MS1, MS2, MS3, MS4, MS5, MS6, WH).</li>
+        <li class="step">You can add new image or edit existing one. There are 3 fields for each entry: label, order, image; label is an optional string to label an image, order should be unique integer from 1-100 which determines the order in which the images are returned (ascending order), image is simply the image itself.</li>
         <li class="step">TODO</li>
         <li class="step">TODO</li>
     </ul>
