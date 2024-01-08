@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syngenta Hololens2 Backend</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .huge-text {
+            font-size: 3em;
+            margin-top: 50px;
+        }
+        .small-text {
+            font-size: 1em;
+            margin: 25px;
+            text-align: left;
+        }
+        .view-admin {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+        .steps {
+            margin-top: 50px;
+            text-align: left;
+            list-style-type: decimal;
+        }
+        .step {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="huge-text">
+        Syngenta Hololens2 Backend
+    </div>
+    <a href="/admin" target="_blank">
+        <div class="view-admin">
+            View Admin Page
+        </div>
+    </a>
+    <div class="small-text">
+        This backend server host the PDF images required for Syngenta Hololens2 application.
+        
+        Images for each station are stored in a different model.
+        Refer to the instruction below on how to modify existing image.
+    </div>
+    <ul class="steps">
+        <li class="step">Log in to Admin Page (link above) with your credentials, or create a new super user by executing `python manage.py createsuperuser`. Make sure that you are in the correct directory where `manage.py` is located.</li>
+        <li class="step">There are 7 stations as follows: MS1, MS2, MS3, MS4, MS5, MS6, WH, each has a different model. In admin page under 'HOLOLENS2IMG', click on a station to access it.</li>
+        <li class="step">TODO</li>
+        <li class="step">TODO</li>
+        <li class="step">TODO</li>
+    </ul>
+</body>
+</html>
