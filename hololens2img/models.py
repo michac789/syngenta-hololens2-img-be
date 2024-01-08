@@ -1,5 +1,6 @@
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
+from hololens2img.utils import convert_image_to_base64
 
 
 class AbstractImageModel(models.Model):
@@ -11,6 +12,15 @@ class AbstractImageModel(models.Model):
     
     class Meta:
         abstract = True
+        
+    def serialize(self):
+        image_url = self.image.url if self.image else ""
+        image_data = convert_image_to_base64(image_url)
+        return {
+            "label": self.label,
+            "order": self.order,
+            "image": image_data,
+        }
 
 
 class MS1(AbstractImageModel):
